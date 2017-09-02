@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<!--
+ * Bootstrap UI form
+ * Copyright 2017 BalAbb.com
+ * Licensed under the MIT license
+-->
+        <html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-
+        scale=1, shrink-to-fit=no">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Contact US</title>
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+      
+ <div class="container">
+    <div class="row">
+        <div class="form-box">
+        <h1>Contact US</span></h1>
+            <form role="form" id="contact-form">
+            <!-- name field -->
+                <div class="form-group">
+                <div id="nameError" class="sr-only" role="alert"></div>
+                <label for="form-name-field" class="sr-only">Name</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+                        <input type="text" class="form-control" id="form-name-field" value="" placeholder="Name">
+                    </div>
+                </div>
+            <!-- email field -->
+                <div class="form-group">
+                <div id="emailError" class="sr-only"" role="alert"></div>
+                <label for="form-email-field" class="sr-only">Email</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span></div>
+                        <input type="email" class="form-control" id="form-email-field" value="" placeholder="Email">
+                    </div>
+                </div>
+            <!-- phone field -->
+                <div class="form-group">
+                <div id="phoneError" class="sr-only"" role="alert"></div>
+                <label for="form-phone-field" class="sr-only">Phone</label>
+                    <div class="input-group">
+                        <div class="input-group-addon"><span class="glyphicon glyphicon-phone"></span></div>
+                        <input type="tel" class="form-control" id="form-phone-field" value="" placeholder="Phone">
+                    </div>
+                </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" id="checkbox-form"> I agree to terms and condition.
+                </label>
+              <div id="term-field" class="well">
+                <p>orem ipsum dolor sit amet, consectetur adipiscing elit. Ut posuere, lacus vel ultricies fringilla, nisi lacus lacinia ligula, non lacinia libero elit nec enim. In sodales risus quis risus luctus consequat. Duis placerat, quam id aliquet facilisis, libero elit ultrices nulla, quis mattis urna nulla quis mauris. Duis porta luctus ante vitae dapibus. Aliquam erat volutpat. Maecenas convallis elementum molestie. Phasellus eget elit diam. Nam in imperdiet enim. Ut auctor arcu id augue ornare aliquet. Nam neque justo, sagittis non augue et, interdum efficitur purus. Morbi rutrum porttitor sapien, ut malesuada metus placerat ac. Curabitur id tellus ut elit auctor volutpat. Curabitur mattis faucibus mauris, efficitur placerat augue rhoncus sit amet. Proin non est rutrum, rhoncus est viverra, consectetur metus. Sed at pellentesque tortor, malesuada ornare enim. Praesent dolor ligula, pulvinar et odio vel, dignissim varius sem.</p>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script type="text/javascript">
+ document.getElementById("contact-form").onsubmit = function() {
+    //Validation of Name
+    if(document.getElementById("form-name-field").value === "") {
+        document.getElementById("nameError").innerHTML = "Invalid Name! Please try again.";
+        document.getElementById("nameError").className = "alert alert-danger";
+        document.getElementById("nameError").style.display = "block";
+    }
+  //Validation of Email
+   if(document.getElementById("form-email-field").value === "") {
+        document.getElementById("emailError").innerHTML = "Invalid Email! Please try again.";
+        document.getElementById("emailError").className = "alert alert-danger";
+        document.getElementById("emailError").style.display = "block";
+    }
+  //Validation of Phone
+   if(document.getElementById("form-email-field").value == "") {
+        document.getElementById("phoneError").innerHTML = "Invalid Phone Number! Please try again.";
+        document.getElementById("phoneError").className = "alert alert-danger";
+        document.getElementById("phoneError").style.display = "block";
+    }
+ }
+document.getElementById("term-field").style.display = "none";
+document.getElementById("checkbox-form").onclick = function() {
+  if(document.getElementById("checkbox-form").checked) {
+    document.getElementById("term-field").style.display = "block";
+  } else {
+    document.getElementById("term-field").style.display = "none";
+  }
+}
+</script>
+
+
+ <style type="text/css">
+
+body {
+    background-color: #eedfec;
+}
+
+.form-box {
+    width: 50%;
+    margin: auto;
+    padding-top:20px;
+}
+
+.form-box h1 {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: tomato;
+}
+
+.form-box h1 span {
+    font-weight: lighter;
+}
+</style>
+   
+
+</body>
+</html>
